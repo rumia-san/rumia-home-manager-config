@@ -1,0 +1,27 @@
+term "screen-256color"
+altscreen on
+vbell off
+caption always "%?%F%{= bW}%:%{= wk}%? %-w%{= rW}%n %t%{-}%+w %=[%H] [%Y-%m-%d %c]"
+startup_message off
+defscrollback 10000
+#     KEYBOARD SHORTCUTS    #
+# execute 'cat > /dev/null' to see the character codes
+# PREVIOUS WINDOW
+# Ctrl + Alt + Left from gnome-terminal
+bindkey ^[[1;7D prev
+# Ctrl+Alt+Left from putty
+bindkey ^[^[[D prev
+# NEXT WINDOW
+# Ctrl + Alt + Right from gnome-terminal
+bindkey ^[[1;7C next
+# Ctrl+Alt+Right from putty
+bindkey ^[^[[C next
+# TAB FOCUS
+bindkey ^[[1;7A focus
+# CREATE TAB
+bindkey ^[[1;7B screen
+# SEARCH MODE
+bindkey ^[OQ title
+
+# scroll using mouse
+termcapinfo xterm* ti@:te@
