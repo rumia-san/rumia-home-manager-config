@@ -27,6 +27,15 @@ let
       sha256 = "sha256-doo+WQaL7pYq6b5VBdr4EZ7lgUzieNps0r0NvLdJP+4=";
     };
   };
+  vim-log-highlighting = pkgs.vimUtils.buildVimPluginFrom2Nix {
+    name = "vim-log-highlighting";
+    src = pkgs.fetchFromGitHub {
+      owner = "mtdl9";
+      repo = "vim-log-highlighting";
+      rev = "v1.0.0";
+      sha256 = "sha256-OtPNGa73CLKXJQJgDJNHiGZc7/nQUnZSpZXsBr1KRts=";
+    };
+  };
 in
 {
   programs.vim = {
@@ -46,6 +55,7 @@ in
       git-blame
       vim-ingo-library
       vim-mark
+      vim-log-highlighting
     ];
     extraConfig = builtins.concatStringsSep "\n" [
       # Common Settings

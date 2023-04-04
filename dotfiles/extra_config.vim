@@ -23,7 +23,7 @@ nnoremap <leader><C-F> :lvimgrep /<C-R><C-W>/ %<Left><Left><Left>
 augroup qf
     " clear all autocommands in this group
     autocmd!
-    " do :cwindow if the quickfix command doesn't start                                                                 " with a 'l' (:grep, :make, etc.)
+    " do :cwindow if the quickfix command doesn't start with a 'l' (:grep, :make, etc.)
     autocmd QuickFixCmdPost [^l]* cwindow
     " do :lwindow if the quickfix command starts with
     " a 'l' (:lgrep, :lmake, etc.)
