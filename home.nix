@@ -16,6 +16,8 @@
     # perl is dependency of zplug...
     nodejs
     # nodejs is dependency of vim plugin coc
+    universal-ctags
+    # universal-ctags is dependency of plugin tagbar
     screen
     ripgrep
     fd

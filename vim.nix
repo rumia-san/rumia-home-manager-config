@@ -42,7 +42,9 @@ in
     enable = true;
     plugins = with pkgs.vimPlugins; [
       fzf-vim
-      vim-airline
+      #vim-airline
+      lightline-vim
+      lightline-bufferline
       vim-cpp-enhanced-highlight
       tagbar
       a-vim
@@ -50,39 +52,19 @@ in
       nord-vim
       onedark-vim
       vim-unimpaired
-      vim-signify
+      #vim-signify
       coc-nvim
       git-blame
       vim-ingo-library
       vim-mark
       vim-log-highlighting
+      vim-nix
     ];
     extraConfig = builtins.concatStringsSep "\n" [
       # Common Settings
       (lib.strings.fileContents ./dotfiles/extra_config.vim)
       # Settings for Plugins
-      ''
-        let g:airline#extensions#tabline#enabled = 1
-        let g:airline#extensions#whitespace#enabled = 0
-
-        nnoremap <F7> :FZF<CR>
-
-        let g:cpp_member_variable_highlight = 1
-        let g:cpp_class_decl_highlight = 1
-
-        nnoremap <F8> :TagbarToggle<CR>
-        let g:tagbar_autofocus = 1
-
-        nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
-
-        if executable('rg')
-          let g:ackprg = 'rg --vimgrep'
-        endif
-        nnoremap <leader>a :Ack<space>
-        nnoremap <leader>A :Ack <C-R><C-W>
-
-        colorscheme nord
-      ''
+      (lib.strings.fileContents ./dotfiles/plugin_config.vim)
     ];
   };
 }
