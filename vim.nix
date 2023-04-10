@@ -42,7 +42,6 @@ in
     enable = true;
     plugins = with pkgs.vimPlugins; [
       fzf-vim
-      #vim-airline
       lightline-vim
       lightline-bufferline
       vim-cpp-enhanced-highlight
@@ -52,7 +51,6 @@ in
       nord-vim
       onedark-vim
       vim-unimpaired
-      #vim-signify
       coc-nvim
       git-blame
       vim-ingo-library

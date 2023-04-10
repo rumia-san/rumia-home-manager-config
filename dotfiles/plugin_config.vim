@@ -1,3 +1,5 @@
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-pyright', 'coc-marketplace']
+
 nnoremap <F7> :FZF<CR>
 
 let g:cpp_member_variable_highlight = 1
