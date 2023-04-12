@@ -63,6 +63,10 @@ in
       (lib.strings.fileContents ./dotfiles/extra_config.vim)
       # Settings for Plugins
       (lib.strings.fileContents ./dotfiles/plugin_config.vim)
+      # Settings for lightline
+      (lib.strings.fileContents ./dotfiles/lightline_config.vim)
+      # Settings for coc.nvim
+      (lib.strings.fileContents ./dotfiles/coc_config.vim)
     ];
   };
 }

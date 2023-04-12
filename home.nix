@@ -18,6 +18,7 @@
     # nodejs is dependency of vim plugin coc
     universal-ctags
     # universal-ctags is dependency of plugin tagbar
+    gcc
     screen
     ripgrep
     fd
