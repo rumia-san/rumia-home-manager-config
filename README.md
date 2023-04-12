@@ -24,3 +24,17 @@
 
 来运行啦
 
+# 镜像
+
+如果需要国内的镜像，命令行里加上
+
+`--substituters https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store`
+
+也就是
+
+`nix build .#homeConfigurations.rumia.activationPackage --extra-experimental-features 'nix-command flakes' --substituters https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store && ./result/activate`
+
+并在 `home.nix` 的 `extraOptions` 里加上
+
+`substituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/`
+
