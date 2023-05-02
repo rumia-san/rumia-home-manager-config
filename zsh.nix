@@ -7,9 +7,9 @@
       egrep="egrep --color=auto";
       fgrep="fgrep --color=auto";
       grep="grep --color=auto";
+      ls="exa";
       "l."="ls -d .* --color=auto";
       ll="ls -l --color=auto";
-      ls="ls --color=auto";
       xzegrep="xzegrep --color=auto";
       xzfgrep="xzfgrep --color=auto";
       xzgrep="xzgrep --color=auto";
